@@ -11,4 +11,5 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('test', ['eslint']);
+  grunt.registerTask('default', ['test']);
 };
