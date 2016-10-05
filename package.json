@@ -4,8 +4,8 @@
   "description": "An appform module for WFM",
   "main": "lib/angular/app.js",
   "scripts": {
-    "build": "wfm-template-build -m 'wfm.appform.directives'",
-    "watch": "wfm-template-build -w -m 'wfm.appform.directives'",
+    "build": "wfm-template-build -m 'wfm.appform'",
+    "watch": "wfm-template-build -w -m 'wfm.appform'",
     "test": "grunt test",
     "test-watch": "mochify --watch test/client/**/*.spec.js",
     "test-debug": "mochify --debug test/client/**/*.spec.js",
