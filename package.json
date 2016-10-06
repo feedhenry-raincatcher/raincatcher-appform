@@ -21,6 +21,8 @@
   "author": "Brian Leathem",
   "license": "MIT",
   "devDependencies": {
+    "angular": "^1.5.8",
+    "angular-mocks": "^1.5.8",
     "async": "1.5.2",
     "bunyan": "1.8.0",
     "config-chain": "1.1.10",
@@ -30,12 +32,15 @@
     "fh-mbaas-api": "5.13.1",
     "fh-wfm-mediator": "0.0.14",
     "fh-wfm-template-build": "0.0.9",
-    "grunt": "1.0.1",
+    "grunt": "0.4.5",
     "grunt-eslint": "18.1.0",
+    "grunt-mochify": "^0.3.0",
     "load-grunt-tasks": "3.5.2",
     "mochify": "2.17.0",
+    "proxyquireify": "3.2.1",
     "should": "8.3.0",
-    "sinon": "^1.17.6"
+    "sinon": "1.17.6",
+    "sinon-as-promised": "4.0.2"
   },
   "dependencies": {
     "fh-wfm-signature": "0.0.12",
