@@ -13,6 +13,7 @@
       name="inputNameX"
       ng-model="fieldLocationCtrl.field.value.lat"
       ng-required="fieldLocationCtrl.field.required"
+      ng-change="fieldLocationCtrl.updateModel()"
     >
   </md-input-container>
 
@@ -22,6 +23,11 @@
       name="inputNameY"
       ng-model="fieldLocationCtrl.field.value.long"
       ng-required="fieldLocationCtrl.field.required"
+      ng-change="fieldLocationCtrl.updateModel()"
     >
   </md-input-container>
+
+  <div class="error" ng-show="fieldLocationCtrl.field.err">
+    Error: {{fieldLocationCtrl.field.err}}
+  </div>
 </div>

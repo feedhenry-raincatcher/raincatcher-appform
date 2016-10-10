@@ -22,6 +22,7 @@ ngModule.run(['$templateCache', function ($templateCache) {
     '      name="inputNameX"\n' +
     '      ng-model="fieldLocationCtrl.field.value.lat"\n' +
     '      ng-required="fieldLocationCtrl.field.required"\n' +
+    '      ng-change="fieldLocationCtrl.updateModel()"\n' +
     '    >\n' +
     '  </md-input-container>\n' +
     '\n' +
@@ -31,8 +32,13 @@ ngModule.run(['$templateCache', function ($templateCache) {
     '      name="inputNameY"\n' +
     '      ng-model="fieldLocationCtrl.field.value.long"\n' +
     '      ng-required="fieldLocationCtrl.field.required"\n' +
+    '      ng-change="fieldLocationCtrl.updateModel()"\n' +
     '    >\n' +
     '  </md-input-container>\n' +
+    '\n' +
+    '  <div class="error" ng-show="fieldLocationCtrl.field.err">\n' +
+    '    Error: {{fieldLocationCtrl.field.err}}\n' +
+    '  </div>\n' +
     '</div>\n' +
     '');
 }]);
