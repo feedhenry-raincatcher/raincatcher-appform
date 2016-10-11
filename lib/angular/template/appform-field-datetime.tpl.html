@@ -1,29 +1,28 @@
-
-<p class="md-caption">{{fieldDateCtrl.field.name}}</p>
 <div layout="row">
-  <md-input-container flex class="md-block" class="appform-field-number">
+  <p class="md-caption">{{fieldDateTimeCtrl.field.name}}</p>
+  <md-input-container flex class="md-block appform-field-number">
     <label for="inputDate" class="">Date</label>
     <input type="date"
-      placeholder="{{fieldDateCtrl.field.helpText}}"
+      placeholder="{{fieldDateTimeCtrl.field.helpText}}"
       name="inputDate"
-      ng-model="fieldDateCtrl.field.value.date"
-      ng-change="fieldDateCtrl.updateModel()"
-      min="{{fieldDateCtrl.field.fieldOptions.validation.min}}"
-      max="{{fieldDateCtrl.field.fieldOptions.validation.max}}"
-      ng-required="fieldDateCtrl.field.required"
+      ng-model="fieldDateTimeCtrl.field.date"
+      ng-change="fieldDateTimeCtrl.updateModel()"
+      min="{{fieldDateTimeCtrl.field.fieldOptions.validation.min}}"
+      max="{{fieldDateTimeCtrl.field.fieldOptions.validation.max}}"
+      ng-required="fieldDateTimeCtrl.field.required"
     >
   </md-input-container>
 
-  <md-input-container flex class="md-block" class="appform-field-number">
+  <md-input-container flex class="md-block appform-field-number">
     <label for="inputTime" class="">Time</label>
     <input type="time"
-           placeholder="{{fieldDateCtrl.field.helpText}}"
+           placeholder="{{fieldDateTimeCtrl.field.helpText}}"
            name="inputTime"
-           ng-model="fieldDateCtrl.field.value.time"
-           ng-change="fieldDateCtrl.updateModel()"
-           min="{{fieldDateCtrl.field.fieldOptions.validation.min}}"
-           max="{{fieldDateCtrl.field.fieldOptions.validation.max}}"
-           ng-required="fieldDateCtrl.field.required"
+           ng-model="fieldDateTimeCtrl.field.time"
+           ng-change="fieldDateTimeCtrl.updateModel()"
+           min="{{fieldDateTimeCtrl.field.fieldOptions.validation.min}}"
+           max="{{fieldDateTimeCtrl.field.fieldOptions.validation.max}}"
+           ng-required="fieldDateTimeCtrl.field.required"
     >
   </md-input-container>
 </div>
