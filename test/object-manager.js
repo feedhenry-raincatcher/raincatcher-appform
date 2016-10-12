@@ -1,8 +1,6 @@
 'use strict';
 
-var _ = require('lodash')
-  , config = require('./test-config')
-  ;
+var _ = require('lodash');
 
 var _objects = [
   { id: 1276001, workflowId: '0', type: 'Job Order', title: 'Footpath in disrepair', status: 'In Progress', startTimestamp: '2015-10-22T07:00:00Z', address: '118 N Peoria @N Chicago, IL 60607', summary: 'Please remove damaged kerb and SUPPLY AND FIX 1X DROP KERB CENTRE BN 125 X 150 cart away from site outside number 3.'},
@@ -38,7 +36,7 @@ function ObjectManager(mediator, datasetId) {
     console.log(self.topic.load, 'called');
     setTimeout(function() {
       var object = _.find(self.objects, function(_object) {
-        return _object.id == id;
+        return _object.id === id;
       });
       mediator.publish('done:' + self.topic.load + ':' + id, object);
     }, 0);
@@ -50,7 +48,7 @@ function ObjectManager(mediator, datasetId) {
     console.log(self.topic.save, 'called');
     setTimeout(function() {
       var index = _.findIndex(self.objects, function(_object) {
-        return _object.id == object.id;
+        return _object.id === object.id;
       });
       self.objects[index] = object;
       console.log('Saved object:', object);
@@ -77,13 +75,13 @@ ObjectManager.prototype.reset = function() {
   _objects.forEach(function(_object) {
     self.objects.push(_.clone(_object));
   });
-}
+};
 
 ObjectManager.prototype.unsubscribe = function() {
   this.mediator.remove(this.topic.list, this.subscription.list.id);
   this.mediator.remove(this.topic.load, this.subscription.load.id);
   this.mediator.remove(this.topic.save, this.subscription.save.id);
   this.mediator.remove(this.topic.create, this.subscription.create.id);
-}
+};
 
 module.exports = ObjectManager;

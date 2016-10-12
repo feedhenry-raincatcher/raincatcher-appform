@@ -1,13 +1,9 @@
-'use strict'
+'use strict';
 
-debugger;
 var $fh = require('../lib/feedhenry')
   , should = require('should')
-  , config = require('../test-config')
   , mediator = require('fh-wfm-mediator/lib/mediator')
-  , testHelper = require('./test-helper')
-  , q = require('q')
-  ;
+  , testHelper = require('./test-helper');
 
 require('../../lib/wrappers/mediator-client')(mediator);
 
@@ -36,7 +32,7 @@ describe('Test appforms', function() {
       forms.should.not.be.empty();
     }, function(error) {
       throw error;
-    })
+    });
   });
 
   it('creating a submission works', function() {
@@ -109,7 +105,7 @@ describe('Test appforms', function() {
       should.exist(submission);
       should.exist(submission.props._ludid);
       should.exist(submission.props._id);
-      should.exist(submission.props.formId)
+      should.exist(submission.props.formId);
 
       submission.props.status.should.equal('submitted');
       submission.props.formId.should.equal('561582e5e375d65e34dd5d8e');
