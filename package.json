@@ -15,7 +15,8 @@
     "test-phantom": "mochify test/client/**/*.spec.js",
     "test-wd": "mochify --wd test/client/**/*.spec.js",
     "test-cover": "mochify --cover test/client/**/*.spec.js",
-    "test-server": "node test/test-server.js | bunyan"
+    "test-server": "node test/test-server.js | bunyan",
+    "test": "grunt eslint"
   },
   "keywords": [
     "wfm",
@@ -33,6 +34,8 @@
     "fh-mbaas-api": "5.14.2",
     "fh-wfm-mediator": "0.0.15",
     "fh-wfm-template-build": "0.0.9",
+    "grunt": "^1.0.1",
+    "grunt-eslint": "^18.0.0",
     "mochify": "2.17.0",
     "should": "8.3.0"
   },
