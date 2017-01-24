@@ -65,6 +65,7 @@ For a more complete example around files operations, please check the [demo port
 | appformFieldDatetime | field, model |
 | appformFieldDate | field, model |
 | appformFieldTime | field, model |
+| appformFieldTextarea | field, model |
 
 ## Usage in an express backend
 
