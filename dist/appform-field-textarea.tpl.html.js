@@ -13,14 +13,16 @@ ngModule.run(['$templateCache', function ($templateCache) {
     '  <textarea\n' +
     '    placeholder="{{ctrl.field.props.helpText}}"\n' +
     '    name="inputTextarea"\n' +
+    '    ng-minlength="ctrl.field.props.fieldOptions.validation.min"\n' +
+    '    ng-maxlength="ctrl.field.props.fieldOptions.validation.max"\n' +
     '    ng-model="ctrl.model.textarea"\n' +
     '    ng-change="ctrl.updateModel()"\n' +
     '    ng-required="ctrl.field.props.required"\n' +
     '  ></textarea>\n' +
     '  <div ng-messages="$parent.fieldForm.inputName.$error" ng-show="$parent.fieldForm.inputName.$dirty || $parent.fieldForm.$submitted">\n' +
     '    <div ng-message="required">A {{field.props.name}} is required.</div>\n' +
-    '    <div ng-message="max" class="help-block">Value must be at most {{field.props.fieldOptions.validation.max}} characters.</div>\n' +
-    '    <div ng-message="min" class="help-block">Value must be at least {{field.props.fieldOptions.validation.min}} characters.</div>\n' +
+    '    <div ng-message="maxlength" class="help-block">Value must be at most {{field.props.fieldOptions.validation.max}} characters.</div>\n' +
+    '    <div ng-message="minlength" class="help-block">Value must be at least {{field.props.fieldOptions.validation.min}} characters.</div>\n' +
     '  </div>\n' +
     '</md-input-container>\n' +
     '');
