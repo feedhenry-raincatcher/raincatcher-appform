@@ -20,6 +20,10 @@ ngModule.run(['$templateCache', function ($templateCache) {
     '    <appform-field-email></appform-field-email>\n' +
     '  </div>\n' +
     '\n' +
+    '  <div ng-switch-when="website">\n' +
+    '    <appform-field-website></appform-field-website>\n' +
+    '  </div>\n' +
+    '\n' +
     '  <div ng-switch-when="text">\n' +
     '    <appform-field-text></appform-field-text>\n' +
     '  </div>\n' +
