@@ -61,6 +61,10 @@ ngModule.run(['$templateCache', function ($templateCache) {
     '  <div ng-switch-when="textarea">\n' +
     '    <appform-field-textarea></appform-field-textarea>\n' +
     '  </div>\n' +
+    '\n' +
+    '  <div ng-switch-when="dropdown">\n' +
+    '    <appform-field-dropdown></appform-field-dropdown>\n' +
+    '  </div>\n' +
     '</div>\n' +
     '');
 }]);
