@@ -1,0 +1,11 @@
+<md-input-container class="md-block" class="appform-field-text">
+
+  <label for="inputName" class="">{{fieldTextCtrl.field.name}}</label>
+  <input type="text"
+         placeholder="{{fieldTextCtrl.field.helpText}}"
+         name="inputName"
+         ng-model="fieldTextCtrl.field.value"
+         ng-required="fieldTextCtrl.field.required",
+         ng-change="fieldTextCtrl.field.updateValue()"
+  >
+</md-input-container>

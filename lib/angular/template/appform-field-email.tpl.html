@@ -1,0 +1,19 @@
+<!--
+
+The template for rendering a Email field into the form.
+Note here that the ng-change directive is bound to the fieldEmailCtrl.field.updateValue function.
+ This function is internal to the field definition in the Submission Model.
+
+ Any values that are to be applied to the submission for this field should use that function.
+-->
+
+<md-input-container class="md-block" class="appform-field-email">
+
+  <label for="inputName" class="">{{fieldEmailCtrl.field.name}}</label>
+  <input type="email"
+    name="inputName"
+    ng-model="fieldEmailCtrl.field.value"
+    ng-required="fieldEmailCtrl.field.required",
+    ng-change="fieldEmailCtrl.field.updateValue()"
+  >
+</md-input-container>
