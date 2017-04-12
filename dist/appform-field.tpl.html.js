@@ -44,6 +44,10 @@ ngModule.run(['$templateCache', function ($templateCache) {
     '      <appform-field-photo model="ctrl.model" field="ctrl.field"></appform-field-photo>\n' +
     '    </div>\n' +
     '\n' +
+    '    <div ng-switch-when="textarea">\n' +
+    '      <appform-field-textarea model="ctrl.model" field="ctrl.field"></appform-field-textarea>\n' +
+    '    </div>\n' +
+    '\n' +
     '    <div ng-switch-default flex>\n' +
     '      <md-input-container class="md-block">\n' +
     '        <label>{{ctrl.field.props.name}}</label>\n' +

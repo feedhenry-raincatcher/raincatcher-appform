@@ -76,6 +76,7 @@ Additional field type support will be added in future.
 | appformFieldDatetime | field, model |
 | appformFieldDate | field, model |
 | appformFieldTime | field, model |
+| appformFieldTextarea | field, model |
 
 ## Usage in an express backend
 

@@ -35,6 +35,10 @@
       <appform-field-photo model="ctrl.model" field="ctrl.field"></appform-field-photo>
     </div>
 
+    <div ng-switch-when="textarea">
+      <appform-field-textarea model="ctrl.model" field="ctrl.field"></appform-field-textarea>
+    </div>
+
     <div ng-switch-default flex>
       <md-input-container class="md-block">
         <label>{{ctrl.field.props.name}}</label>

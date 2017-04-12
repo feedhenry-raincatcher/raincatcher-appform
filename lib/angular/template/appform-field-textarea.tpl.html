@@ -1,0 +1,18 @@
+
+<md-input-container class="md-block" class="{{field.props.fieldCode}} appform-field-textarea">
+  <label for="inputTextarea" class="">{{field.props.name}}</label>
+  <textarea
+    placeholder="{{ctrl.field.props.helpText}}"
+    name="inputTextarea"
+    ng-minlength="ctrl.field.props.fieldOptions.validation.min"
+    ng-maxlength="ctrl.field.props.fieldOptions.validation.max"
+    ng-model="ctrl.model.textarea"
+    ng-change="ctrl.updateModel()"
+    ng-required="ctrl.field.props.required"
+  ></textarea>
+  <div ng-messages="$parent.fieldForm.inputName.$error" ng-show="$parent.fieldForm.inputName.$dirty || $parent.fieldForm.$submitted">
+    <div ng-message="required">A {{field.props.name}} is required.</div>
+    <div ng-message="maxlength" class="help-block">Value must be at most {{field.props.fieldOptions.validation.max}} characters.</div>
+    <div ng-message="minlength" class="help-block">Value must be at least {{field.props.fieldOptions.validation.min}} characters.</div>
+  </div>
+</md-input-container>
