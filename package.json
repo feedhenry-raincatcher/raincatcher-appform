@@ -11,11 +11,11 @@
     "build": "wfm-template-build -m 'wfm.appform'",
     "watch": "wfm-template-build -w -m 'wfm.appform'",
     "test": "grunt test",
-    "test-watch": "mochify --watch test/client/**/*.spec.js",
-    "test-debug": "mochify --debug test/client/**/*.spec.js",
-    "test-phantom": "mochify test/client/**/*.spec.js",
-    "test-wd": "mochify --wd test/client/**/*.spec.js",
-    "test-cover": "mochify --cover test/client/**/*.spec.js",
+    "test-watch": "mochify --watch lib/angular/**/*-spec.js",
+    "test-debug": "mochify --debug lib/angular/**/*-spec.js",
+    "test-phantom": "mochify lib/angular/**/*-spec.js",
+    "test-wd": "mochify --wd lib/angular/**/*-spec.js",
+    "test-cover": "mochify --cover lib/angular/**/*-spec.js",
     "test-server": "node test/test-server.js | bunyan"
   },
   "keywords": [

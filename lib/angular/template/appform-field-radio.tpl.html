@@ -1,0 +1,10 @@
+
+<div>
+    <md-radio-group ng-model="fieldRadioCtrl.field.value">
+        <div ng-repeat="option in fieldRadioCtrl.field.fieldOptions.definition.options" layout="row">
+            <div flex>
+                <md-radio-button ng-value="option.label" aria-label="{{option.label}}">{{option.label}}</md-radio-button>
+            </div>
+        </div>
+    </md-radio-group>
+</div>

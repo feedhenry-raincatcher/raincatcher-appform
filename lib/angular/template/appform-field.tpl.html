@@ -53,7 +53,13 @@
     <appform-field-textarea></appform-field-textarea>
   </div>
 
+  <div ng-switch-when="dropdown">
+    <appform-field-dropdown></appform-field-dropdown>
+  </div>
   <div ng-switch-when="checkbox">
     <appform-field-checkbox></appform-field-checkbox>
+  </div>
+  <div ng-switch-when="radio">
+	<appform-field-radio></appform-field-radio>
   </div>
 </div>
