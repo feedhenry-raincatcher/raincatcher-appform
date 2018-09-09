@@ -99,7 +99,7 @@ require('fh-wfm-appform/lib/server')(mbaasApi);
 
 ### Forms events
 
-This module will subscribe to the the `submissionEventListener` and react on these events :
+This module will subscribe to the `submissionEventListener` and react on these events :
 
 - `submissionStarted`
 - `submissionComplete`
